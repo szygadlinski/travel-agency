@@ -1,0 +1,9 @@
+.switchWrapper {
+  position: relative;
+
+  > :first-child ~ * {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
