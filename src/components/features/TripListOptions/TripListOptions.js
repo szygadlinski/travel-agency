@@ -6,18 +6,22 @@ import {Row, Col} from 'react-flexbox-grid';
 
 class TripListOptions extends React.Component {
   handleTags(tag, checked){
+    const tags = this.props.filters.tags;
+
     if(checked) {
       console.log('Adding tag', tag);
-      this.props.addTag(tag);
+      tags.push(tag);
     } else {
       console.log('Removing tag', tag);
-      this.props.removeTag(tag);
+      tags.splice(tags.indexOf(tag), 1);
     }
+    this.props.changeTags(tags);
   }
 
   handleDuration(type, value){
-    console.log('Changing duration', type, value);
-    this.props.changeDuration(type, value);
+    //console.log('Changing duration', type, value);
+    this.props.filters.duration[type] = parseInt(value);
+    this.props.changeDuration(this.props.filters.duration);
   }
 
   handleSearch(phrase){
@@ -32,7 +36,7 @@ class TripListOptions extends React.Component {
           <Col lg={4}>
             <div className={styles.filter}>
               <label>
-                <input className={`${styles.input} ${styles.search}`} type='text' placeholder='Search...' value={filters.phrase} onChange={event => this.handleSearch(event.currentTarget.value)} />
+                <input className={`${styles.input} ${styles.search}`} type='text' placeholder='Search...' onChange={event => this.handleSearch(event.currentTarget.value)} />
               </label>
             </div>
           </Col>
@@ -74,8 +78,7 @@ TripListOptions.propTypes = {
   filters: PropTypes.object,
   changeSearchPhrase: PropTypes.func,
   changeDuration: PropTypes.func,
-  addTag: PropTypes.func,
-  removeTag: PropTypes.func,
+  changeTags: PropTypes.func,
 };
 
 export default TripListOptions;

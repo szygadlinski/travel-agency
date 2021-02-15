@@ -13,7 +13,7 @@ const initialState = {
   tags: {},
   filters: {
     searchPhrase: '',
-    tags: ['spa'],
+    tags: [],
     duration: {
       from: 1,
       to: 14,
