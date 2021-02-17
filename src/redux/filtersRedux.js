@@ -45,7 +45,7 @@ export default function reducer(statePart = [], action = {}) {
         ],
       };
     case REMOVE_TAG: {
-      let newTags = statePart.tags.filter(tag => statePart.tags[statePart.tags.indexOf(tag)] !== action.payload.tag);
+      let newTags = statePart.tags.filter(tag => tag !== action.payload.tag);
       return {
         ...statePart,
         tags: [...newTags],
