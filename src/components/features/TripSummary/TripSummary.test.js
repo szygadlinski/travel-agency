@@ -39,8 +39,8 @@ describe('Component TripSummary', () => {
     expect(component.find('.tag').at(2).text()).toBe('qwerty');
   });
 
-  it('should not render div .tags without prop tags or with prop tags = []', () => {
-    expect(shallow(<TripSummary />).find('.tags')).toEqual({});
-    expect(shallow(<TripSummary tags={[]} />).find('.tags')).toEqual({});
+  it('should not render div .tags without prop tags or with empty array', () => {
+    expect(shallow(<TripSummary />).exists('.tags')).toEqual(false);
+    expect(shallow(<TripSummary tags={[]} />).exists('.tags')).toEqual(false);
   });
 });
