@@ -1,0 +1,18 @@
+.component {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.title, .description {
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  bottom: 40px;
+}
+
+.description {
+  bottom: 10px;
+}

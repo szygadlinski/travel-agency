@@ -5,13 +5,12 @@ import OrderOption from './OrderOption';
 describe('Component OrderOption', () => {
   it('should render correctly', () => {
     const component = shallow(<OrderOption name='name' type='type' />);
-    expect(component).toBeTruthy;
+    expect(component).toBeTruthy();
   });
 
-  it('should return empty object if called without required props', () => {
-    // Chyba w poleceniu jest tu błąd? Bo tak jak miało być to nie działa, zerkniesz?
-    // Czy na pewno nie chodziło o coś takiego zamiast tego co w poleceniu?
-    expect(() => shallow(<OrderOption />)).toThrow();
+  it('should return empty object if prop type is unrecognized', () => {
+    const component = shallow(<OrderOption name='name' type='type' />);
+    expect(component).toEqual({});
   });
 
   it('should render correct title', () => {
