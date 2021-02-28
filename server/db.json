@@ -221,6 +221,51 @@
       "tripName": "Awesome cruise in excellent Ukraine",
       "countryCode": "UKR",
       "id": 15
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "start-date": "2021-02-28T17:43:45.522Z",
+      "name": "sss",
+      "contact": "dddd",
+      "totalCost": "$33,417",
+      "tripId": "5cc1d1015f3c5f5f14384b15",
+      "tripName": "Wondrous travel in excellent United States of America",
+      "countryCode": "USA",
+      "id": 16
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "start-date": "2021-02-28T17:59:46.102Z",
+      "name": "",
+      "contact": "ss",
+      "totalCost": "$33,417",
+      "tripId": "5cc1d1015f3c5f5f14384b15",
+      "tripName": "Wondrous travel in excellent United States of America",
+      "countryCode": "USA",
+      "id": 17
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "start-date": "2021-02-28T18:00:14.661Z",
+      "name": "cc",
+      "contact": "tt",
+      "totalCost": "$33,417",
+      "tripId": "5cc1d1015f3c5f5f14384b15",
+      "tripName": "Wondrous travel in excellent United States of America",
+      "countryCode": "USA",
+      "id": 18
     }
   ]
 }

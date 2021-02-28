@@ -51,20 +51,15 @@ const OrderForm = ({options, tripCost, setOrderOption, tripId, tripName, country
       </Col>
     ))}
 
-    {options.name.length > 0 && options.contact.length > 0 ?
-      <Button onClick={ () => (
+    <Button
+      disabled={options.name.length == 0 || options.contact.length == 0}
+      onClick={ () => (
         sendOrder(options, tripCost, tripId, tripName, countryCode),
         alert('Thank you for your order!')
-      )}>
-        Order now!
-      </Button>
-      :
-      <Button onClick={ () => (
-        alert('You have to provide your name and contact info!')
-      )}>
-        Order now!
-      </Button>
-    }
+      )}
+    >
+      Order now!
+    </Button>
 
     <Col xs={12}>
       <OrderSummary
