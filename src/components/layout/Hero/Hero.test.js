@@ -35,4 +35,9 @@ describe('Component Hero', () => {
     const component = shallow(<Hero imageSrc='image.jpg' />);
     expect(component.find('HappyHourAd').length).toBe(1);
   });
+
+  it('should render DaysToSummer', () => {
+    const component = shallow(<Hero imageSrc='image.jpg' />);
+    expect(component.find('DaysToSummer').length).toBe(1);
+  });
 });

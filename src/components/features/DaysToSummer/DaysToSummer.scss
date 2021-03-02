@@ -1,0 +1,12 @@
+@import '../../../styles/settings.scss';
+
+.component {
+  z-index: 999;
+  position: absolute;
+  color: $color-light;
+  font-size: $base-size * 2;
+  font-weight: 900;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
