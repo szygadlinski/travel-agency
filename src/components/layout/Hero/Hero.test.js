@@ -25,19 +25,19 @@ describe('Component Hero', () => {
 
   it('renders correct classNames', () => {
     const mockVariants = 'small dummy';
-    const component = shallow(<Hero titleText='Lorem' imageSrc='image.jpg' variant={mockVariants} />);
+    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image.jpg' variant={mockVariants} />);
     expect(component.hasClass('component')).toBe(true);
     expect(component.hasClass('small')).toBe(true);
     expect(component.hasClass('dummy')).toBe(true);
   });
 
   it('should render HappyHourAd', () => {
-    const component = shallow(<Hero imageSrc='image.jpg' />);
+    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image.jpg' />);
     expect(component.find('HappyHourAd').length).toBe(1);
   });
 
   it('should render DaysToSummer', () => {
-    const component = shallow(<Hero imageSrc='image.jpg' />);
+    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image.jpg' />);
     expect(component.find('DaysToSummer').length).toBe(1);
   });
 });

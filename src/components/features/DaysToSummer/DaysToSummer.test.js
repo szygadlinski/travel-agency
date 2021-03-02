@@ -8,7 +8,7 @@ describe('Component DaysToSummer', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain div with class daysAmount', () => {
+  it('should contain div with class component', () => {
     const component = shallow(<DaysToSummer />);
     expect(component.exists('.component')).toBe(true);
   });

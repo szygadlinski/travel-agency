@@ -39,36 +39,46 @@ const sendOrder = (options, tripCost, tripId, tripName, countryCode) => {
     });
 };
 
-const OrderForm = ({options, tripCost, setOrderOption, tripId, tripName, countryCode}) => (
-  <Row>
-    {pricing.map(option => (
-      <Col md={4} key={option.id}>
-        <OrderOption
-          currentValue={options[option.id]}
-          setOrderOption={setOrderOption}
-          {...option}
+const OrderForm = ({options, tripCost, setOrderOption, tripId, tripName, countryCode}) => {
+  let isDisabled;
+  if(options.name.length == 0 || options.contact.length == 0){
+    isDisabled = true;
+  } else {
+    isDisabled = false;
+  }
+
+  return (
+    <Row>
+      {pricing.map(option => (
+        <Col md={4} key={option.id}>
+          <OrderOption
+            currentValue={options[option.id]}
+            setOrderOption={setOrderOption}
+            {...option}
+          />
+        </Col>
+      ))}
+
+      <Button
+        disabled={isDisabled}
+        variant={isDisabled == true ? 'disabled' : ''}
+        onClick={ () => (
+          sendOrder(options, tripCost, tripId, tripName, countryCode),
+          alert('Thank you for your order!')
+        )}
+      >
+      Order now!
+      </Button>
+
+      <Col xs={12}>
+        <OrderSummary
+          tripCost={tripCost}
+          options={options}
         />
       </Col>
-    ))}
-
-    <Button
-      disabled={options.name.length == 0 || options.contact.length == 0}
-      onClick={ () => (
-        sendOrder(options, tripCost, tripId, tripName, countryCode),
-        alert('Thank you for your order!')
-      )}
-    >
-      Order now!
-    </Button>
-
-    <Col xs={12}>
-      <OrderSummary
-        tripCost={tripCost}
-        options={options}
-      />
-    </Col>
-  </Row>
-);
+    </Row>
+  );
+};
 
 OrderForm.propTypes = {
   tripCost: PropTypes.string,

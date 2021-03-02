@@ -296,6 +296,21 @@
       "tripName": "Surprising jaunt in admirable United Arab Emirates",
       "countryCode": "ARE",
       "id": 20
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "start-date": "2021-03-02T17:42:29.775Z",
+      "name": "ddd",
+      "contact": "sss",
+      "totalCost": "$68,733",
+      "tripId": "5cc1d10107e2be6064ff9129",
+      "tripName": "Surprising jaunt in admirable United Arab Emirates",
+      "countryCode": "ARE",
+      "id": 21
     }
   ]
 }
