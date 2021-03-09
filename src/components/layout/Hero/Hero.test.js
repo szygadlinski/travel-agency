@@ -1,6 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import Hero from './Hero';
+import HappyHourAd from '../../features/HappyHourAd/HappyHourAd';
+import DaysToSummer from '../../features/DaysToSummer/DaysToSummer';
 
 describe('Component Hero', () => {
   it('should render without crashing', () => {
@@ -33,11 +35,11 @@ describe('Component Hero', () => {
 
   it('should render HappyHourAd', () => {
     const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image.jpg' />);
-    expect(component.find('HappyHourAd').length).toBe(1);
+    expect(component.find(HappyHourAd).length).toBe(1);
   });
 
   it('should render DaysToSummer', () => {
     const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image.jpg' />);
-    expect(component.find('DaysToSummer').length).toBe(1);
+    expect(component.find(DaysToSummer).length).toBe(1);
   });
 });

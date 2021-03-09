@@ -14,7 +14,7 @@ const Hero = ({variant = '', titleText, imageSrc, ...otherProps}) => (
     <div className={styles.happyHour}>
       <HappyHourAd
         title='Happy Hour'
-        description='It is your time! Take advantage of Happy Hour! All offers 20% off!'
+        description={'It\'s your time! Take advantage of Happy Hour! All offers 20% off!'}
       />
     </div>
   </div>
