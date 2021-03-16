@@ -4,9 +4,13 @@ import styles from './HappyHourAd.scss';
 import {formatTime} from '../../../utils/formatTime';
 
 class HappyHourAd extends React.Component {
-  constructor(){
-    super();
-    setInterval(() => this.forceUpdate(), 1000);
+  constructor(props){
+    super(props);
+    this.interval = setInterval(() => this.forceUpdate(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   static propTypes = {
