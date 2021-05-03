@@ -53,10 +53,7 @@ class App extends React.Component {
         opacity: 0,
         top: 200,
       },
-      atLeave: {
-        opacity: 0,
-        top: 0,
-      },
+      atLeave: {},
       atActive: {
         opacity: 1,
         top: 0,
